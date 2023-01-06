@@ -1,2 +1,2 @@
-# practice-repo
+# Animal Finder
 for practice
