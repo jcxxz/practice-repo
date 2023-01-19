@@ -135,7 +135,7 @@ fetchFactButton.addEventListener("click", function() {
     fetchFactButton.innerText = "Get another Fact!";
     firstClick = false;
   }
-  fetch("https://dogapi.dog/api/v2/facts?limit=5")
+  fetch("https://dogapi.dog/api/v2/facts?limit=1")
     .then(response => {
         if(!response.ok) {
             throw new Error("error")
@@ -144,7 +144,6 @@ fetchFactButton.addEventListener("click", function() {
         
     })
     .then(data => {
-      i = 0
       console.log(data.data[0].attributes.body)
         var fact = data.data[0].attributes.body;
         var factContainer = document.getElementById("fact-container");
