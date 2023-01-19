@@ -75,83 +75,81 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Animal Finder
+        Dog Browser
       </h1>
       <p class="subtitle">
-        Find a breed to <strong>Adopt</strong>!
-      </p>
+        Interested in owning a dog but aren't sure about the breed? You've come to the right place!</p>
 
-      <p class="subtitle">
-        Get the breed of your choice for adoption in your area.</a>
+        <p class="subtitle"> Select the <strong>Dog Breeds</strong> tab to browse photos of dog breeds to help you decide which you like best!</p>
+        
+        <p class="subtitle">Select the <strong>Random Fact</strong> tab to get a random dog fact to help you understand the animals you wish to own.
       </p>
-
       <div id="tabs-with-content">
         <div class="tabs is-medium is-toggle is-toggle-rounded">
           <ul>
+            <!-- Dog Breeds Tab Icon -->
             <li><a>
                 <span class="icon is-medium"><i class="fas fa-dog" aria-hidden="true"></i></span>
-        <span>Dogs</span>
+        <span>Dog Breeds</span>
             </a></li>
+
+            <!-- Random Facts Tab Icon-->
             <li><a>
-                <span class="icon is-medium"><i class="fas fa-cat" aria-hidden="true"></i></span>
-        <span>Cats</span>
+                <span class="icon is-medium"><i class="fa-regular fa-comment" aria-hidden="true"></i></span>
+        <span>Random Fact</span>
             </a></li> 
           </ul>
         </div>
+        <!-- Dog Breed Images Drop Down -->
         <div>
           <section class="tab-content">
             <div class="field">
                 <div class="control">
                     <span class="select">
-                        <select>
-                          <option>Akita</option>
-                          <option>Labrador retriever</option>
-                          <option>Goldendoodle</option>
-                          <option>Golden retriever</option>
-                          <option>French bulldog</option>  
+                        <select id="breed-select">
+                          <option value="akita">Akita</option>
+                          <option value="malinois">Malinois</option>
+                          <option value="malamute">Malamute</option>
+                          <option value="pug">Pug</option>
+                          <option value="pyrenees">Pyrenees</option>  
                         </select>
                       </span>
                 </div>
               </div>
-        
-              <div class="field">
-                <p class="control">
-                  <input class="input" type="text" placeholder="Enter your zipcode">
-                </p>
-              </div>
-        
+              <!-- Image goes in this div -->
+              <div id="image-container">
+                <div id="loading-spinner"></div>
+            </div>
+
+              <!-- Fetch Dog Breed Image button -->
               <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-primary" id="fetch-img-btn">
                     <i class="fas fa-search"></i>
                      Search
                 </a>
                </div>
           </section>
+
+          <!-- Random Fact Tab Icon -->
           <section class="tab-content">
             <div class="field">
                 <div class="control">
                     <span class="select">
-                        <select>
-                          <option>American Shorthair</option>
-                          <option>Ragdoll</option>
-                          <option>Maine Coon</option>
-                          <option>Bengal</option>
-                          <option>Siamese</option>
+                        <select id="fact-select">
+                          <option>Get a Random Dog Fact!</option> 
                         </select>
                       </span>
                 </div>
               </div>
-        
-              <div class="field">
-                <p class="control">
-                  <input class="input" type="text" placeholder="Enter your zipcode">
-                </p>
-              </div>
-        
+              <!-- Fact will go in this div -->
+              <div id="fact-container">
+                <div id="loading-spinner"></div>
+            </div>
+              <!-- Fetch Random Fact Button -->
               <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-primary" id="fetch-fact-btn">
                     <i class="fas fa-search"></i>
-                     Search
+                     Get Fact
             </a>
                </div>
           </section>
