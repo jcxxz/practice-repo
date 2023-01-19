@@ -64,6 +64,8 @@ fetchImageButton.addEventListener("click", function () {
     .catch(error => console.log(error));
 });
 
+
+
 var fetchFactButton = document.getElementById("fetch-fact-btn");
 var firstClick = true;
 
@@ -95,3 +97,4 @@ fetchFactButton.addEventListener("click", function () {
     })
     .catch(err => console.log(err))
 });
+
