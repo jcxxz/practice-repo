@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animal Finder</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/74eedd6986.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item animal-logo" href="index.html">
+          <img src="assets/images/logoAnimalFinder.png">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Documentation
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Dog Browser
+      </h1>
+      <p class="subtitle">
+        Interested in owning a dog but aren't sure about the breed? You've come to the right place!</p>
+
+      <p class="subtitle"> Select the <strong>Dog Breeds</strong> tab to browse photos of dog breeds to help you decide
+        which you like best!</p>
+
+      <p class="subtitle">Select the <strong>Random Fact</strong> tab to get a random dog fact to help you understand
+        the animals you wish to own.
+      </p>
+      <div id="tabs-with-content">
+        <div class="tabs is-medium is-toggle is-toggle-rounded">
+          <ul>
+            <!-- Dog Breeds Tab Icon -->
+            <li><a>
+                <span class="icon is-medium"><i class="fas fa-dog" aria-hidden="true"></i></span>
+                <span>Dog Breeds</span>
+              </a></li>
+
+            <!-- Random Facts Tab Icons-->
+            <li><a>
+                <span class="icon is-medium"><i class="fa-regular fa-comment" aria-hidden="true"></i></span>
+                <span>Random Fact</span>
+              </a></li>
+            <li><a>
+              <span class="icon is-medium"><i class="fa-regular fa-comment" aria-hidden="true"></i></span>
+              <span>Saved Facts</span>
+            </a></li>
+          </ul>
+        </div>
+        <!-- Dog Breed Images Drop Down -->
+        <div>
+          <section class="tab-content">
+            <div class="field">
+              <div class="control">
+                <span class="select">
+                  <select id="breed-select">
+                    <option value="akita">Akita</option>
+                    <option value="malinois">Malinois</option>
+                    <option value="malamute">Malamute</option>
+                    <option value="pug">Pug</option>
+                    <option value="pyrenees">Pyrenees</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <!-- Image goes in this div -->
+            <div id="image-container">
+              <div id="loading-spinner"></div>
+            </div>
+
+            <!-- Fetch Dog Breed Image button -->
+            <div class="buttons">
+              <a class="button is-primary" id="fetch-img-btn">
+                <i class="fas fa-search"></i>
+                Search
+              </a>
+            </div>
+          </section>
+
+          <!-- Random Fact Tab Icon -->
+          <section class="tab-content">
+            <div class="field">
+              <div class="control">
+                <span class="select">
+                  <select id="fact-select">
+                    <option>Get a Random Dog Fact!</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <!-- Fact will go in this div -->
+            <div id="fact-container">
+              <div id="loading-spinner"></div>
+            </div>
+            <!-- Fetch Random Fact Button -->
+            <div class="buttons">
+              <a class="button is-primary" id="fetch-fact-btn">
+                <i class="fas fa-search"></i>
+                Get Fact
+              </a>
+              <a class="button is-primary" id="save-fact-btn">
+                <i class="fa-regular fa-floppy-disk"></i>
+                Save Fact
+              </a>
+            </div>
+          </section>
+          <section class="tab-content">
+            <div class="field">
+              <div class="control">
+                <div id="saved-facts-container"></div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
