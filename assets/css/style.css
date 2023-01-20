@@ -35,3 +35,24 @@ margin-top: 80px;
   #tabs-with-content .tab-content.is-active {
     display: block;
   }
+
+#fact-container { 
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f9efe9;
+    margin: 20px;
+    padding: 0%
+  }
+
+  #image-container {
+    border-radius: 20px;
+    margin: 20px;
+    padding: 0%;
+  }
+
+  #dog-image {
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
